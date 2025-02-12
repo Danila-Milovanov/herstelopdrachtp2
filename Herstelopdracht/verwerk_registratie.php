@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tijdslot = !empty($_POST['tijdslot']) ? valideerInvoer($_POST['tijdslot']) : $fouten[] = "Kies een tijdslot.";
 
 
-    $stad = !empty($_POST['stad']) && in_array($_POST['stad'], ['Amsterdam', 'Rotterdam', 'Utrecht', 'Den Haag']) ? valideerInvoer($_POST['stad']) : $fouten[] = "Kies een geldige stad.";
+    $stad = !empty($_POST['stad']) && in_array($_POST['stad'], ['Amsterdam', 'Rotterdam', 'Utrecht', 'Den Haag', 'Schiedam', 'Zwolle', 'Rhoon']) ? valideerInvoer($_POST['stad']) : $fouten[] = "Kies een geldige stad.";
 
     // if errors - feedback
     if ($fouten) {
